@@ -17,6 +17,17 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Function to handle resume download
+  const handleResumeDownload = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';  // Path to your PDF in public folder
+    link.download = 'Rahul_Mohite_Resume.pdf';  // Download with this filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <header
       className={cn(
@@ -45,7 +56,11 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <Button variant="primary" size="default">
+          <Button 
+            variant="primary" 
+            size="default"
+            onClick={handleResumeDownload}
+          >
             Resume
           </Button>
         </nav>

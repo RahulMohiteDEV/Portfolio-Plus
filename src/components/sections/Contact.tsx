@@ -4,6 +4,24 @@ import { SITE_CONFIG } from '@/lib/constants';
 import { Button } from '@/components/shared/Button';
 
 export function Contact() {
+  // Function to handle resume download
+  const handleResumeDownload = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';  // Path to your PDF in public folder
+    link.download = 'Rahul_Mohite_Resume.pdf';  // Download with this filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  // Function to handle form submission
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Add your form submission logic here
+    alert('Thank you for your message! I will get back to you soon.');
+  };
+
   return (
     <section className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="contact">
       <div className="bg-surface-container-low border border-outline-variant/30 rounded-2xl p-8 md:p-16">
@@ -35,19 +53,21 @@ export function Contact() {
               variant="outline"
               size="large"
               className="mt-12 inline-flex items-center gap-2"
+              onClick={handleResumeDownload}
             >
               <span className="material-symbols-outlined">download</span>
               Download Resume (PDF)
             </Button>
           </div>
 
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label className="block font-label-md mb-2 text-on-surface-variant">Name</label>
               <input
                 type="text"
                 className="w-full bg-surface border border-outline-variant rounded-lg p-4 focus:outline-none focus:border-primary transition-colors"
-                placeholder="John Doe"
+                placeholder="Name"
+                required
               />
             </div>
             <div>
@@ -55,7 +75,8 @@ export function Contact() {
               <input
                 type="email"
                 className="w-full bg-surface border border-outline-variant rounded-lg p-4 focus:outline-none focus:border-primary transition-colors"
-                placeholder="john@example.com"
+                placeholder="mail@example.com"
+                required
               />
             </div>
             <div>
@@ -64,6 +85,7 @@ export function Contact() {
                 rows={4}
                 className="w-full bg-surface border border-outline-variant rounded-lg p-4 focus:outline-none focus:border-primary transition-colors"
                 placeholder="Tell me about your project..."
+                required
               />
             </div>
             <button

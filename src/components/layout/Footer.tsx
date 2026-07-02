@@ -13,7 +13,7 @@ export function Footer() {
         </div>
 
         <p className="font-label-md text-on-surface-variant text-center md:text-left">
-          © 2024 Full Stack Dev. Built with high-performance engineering principles.
+          © 2026 Full Stack Dev. Built with high-performance engineering principles.
         </p>
 
         <div className="flex gap-8 font-label-md">

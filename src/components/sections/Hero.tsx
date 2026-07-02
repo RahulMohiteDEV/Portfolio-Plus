@@ -31,6 +31,17 @@ export function Hero() {
     });
   }, []);
 
+  // Function to handle resume download
+  const handleResumeDownload = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';  // Path to your PDF in public folder
+    link.download = 'Rahul_Mohite_Resume.pdf';  // Download with this filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="min-h-[80vh] flex items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-20 relative">
       <div className="relative z-10 w-full md:w-3/4">
@@ -69,7 +80,7 @@ export function Hero() {
             View Projects
             <span className="material-symbols-outlined text-[20px]">arrow_downward</span>
           </Button>
-          <Button variant="outline" size="large">
+          <Button variant="outline" size="large" onClick={handleResumeDownload}>
             Download Resume
             <span className="material-symbols-outlined text-[20px]">download</span>
           </Button>
