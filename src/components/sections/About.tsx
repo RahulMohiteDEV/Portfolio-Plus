@@ -34,7 +34,7 @@ export function About() {
           </h3>
           <div className="space-y-6 font-body-lg text-on-surface-variant/80">
             <p>
-              I am a dedicated developer specialized in the MERN stack and Next.js, with a passion for creating seamless user experiences and robust backend architectures. My approach blends technical precision with modern design principles.
+              With a Master's in Computer Science and a strong foundation in JavaScript, TypeScript, and database management, I bring a blend of academic knowledge and practical experience to every project. I am committed to continuous learning and delivering high-impact, accessible web applications.
             </p>
             <p>
               Currently, I am contributing as a <span className="text-primary font-bold">MERN Full Stack Developer at Satara Biochem</span>, where I lead the development of critical internal tools and high-performance web platforms using TypeScript and cutting-edge DevOps workflows.

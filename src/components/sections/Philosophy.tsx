@@ -19,6 +19,7 @@ const philosophies = [
     title: 'Clear Communication',
     description: 'Bridging the gap between technical complexity and business value. I maintain transparency and alignment throughout the development cycle.',
   },
+  
 ];
 
 export function Philosophy() {

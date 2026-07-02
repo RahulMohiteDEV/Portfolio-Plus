@@ -62,14 +62,16 @@ export function Hero() {
           ref={subtitleRef}
           className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface-variant mb-8 max-w-2xl opacity-0 translate-y-5"
         >
-          MERN & Next.js Full Stack Developer
+          Build Better, Faster, and Smarter with Full Stack Expertise
         </h2>
 
         <p
           ref={descRef}
           className="font-body-lg text-body-lg text-on-surface-variant/80 max-w-xl mb-12 opacity-0 translate-y-5"
         >
-          Building scalable, high-performance web applications with a focus on CI/CD and AI integration.
+          Building modern scalable, high-performance web applications with a focus on CI/CD and AI integration.Let's create something amazing together.
+
+
         </p>
 
         <div
