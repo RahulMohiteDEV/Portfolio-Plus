@@ -16,7 +16,7 @@ const philosophies = [
   },
   {
     icon: 'forum',
-    title: 'Clear Communication',
+    title: '',
     description: 'Bridging the gap between technical complexity and business value. I maintain transparency and alignment throughout the development cycle.',
   },
   
